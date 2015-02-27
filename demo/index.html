@@ -1,99 +1,90 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="../bower_components/animate.css/animate.min.css" rel="stylesheet" />
   
-  
-  <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>
-
-    
-      <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
-    
-  
-    
-      <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.js"></script>
-    <script type="text/javascript" src="../angular.animation.js"></script>
-
-    
-  
-  <style type='text/css'>
-    .style {
-    background-color: red;
-    margin: 10px;
-    padding: 10px;
-}
-
+<style type='text/css'>
+        .style {
+            background-color: red;
+            margin: 10px;
+            padding: 10px;
+        }
     </style>
-    
-  
-  
+
+
+
 </head>
+
 <body ng-app="myApp">
-  <div ng-controller="CompaniesCtrl">
-  <h2>Companies</h2>
-  <button ng-click="add()">Add</button>
-  <button ng-click="remove()">Remove</button>
+    <div ng-controller="CompaniesCtrl">
+        <h2>Companies</h2>
+        <button ng-click="add()">Add</button>
+        <button ng-click="remove()">Remove</button>
 
-  <ul>
-      <li enter-animation="{'animation':'slideInRight','duration':1,'stagger':1}" leave-animation="{'animation':'slideInRight','duration':1,'stagger':1}" uniquekey="style" animation duration="1" stagger="1"  ng-repeat="company in companies">
-          <div>
-              <h4>{{company.name}}</h4>
-              <p>{{company.description}}</p>
-          </div>
-      </li>
-  </ul>
-</div>
-
-  
+        <ul>
+            <li enter-animation="{'animation':'slideInRight','duration':1,'stagger':1}" leave-animation="{'animation':'slideInRight','duration':1,'stagger':1}" uniquekey="style" animation duration="1" stagger="1" ng-repeat="company in companies">
+                <div>
+                    <h4>{{company.name}}</h4>
+                    <p>{{company.description}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 
-<script type='text/javascript'>//<![CDATA[ 
 
-var myApp = angular.module('myApp', ['ngAnimate','angular-animation']);
+  <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.js"></script>
+    <script type="text/javascript" src="../angular.animation.js"></script>
+    <script type='text/javascript'>
+        //<![CDATA[ 
 
-function CompaniesCtrl($scope) {
-    $scope.companies = [{
-        name: "Company A",
-        description: 'A software vendor'
+        var myApp = angular.module('myApp', ['ngAnimate', 'angular-animation']);
+
+        function CompaniesCtrl($scope) {
+            $scope.companies = [{
+                name: "Company A",
+                description: 'A software vendor'
     }, {
-        name: "Company B",
-        description: 'Another software vendor'
+                name: "Company B",
+                description: 'Another software vendor'
     }, {
-        name: "Company C",
-        description: 'A software consultancy shop'
+                name: "Company C",
+                description: 'A software consultancy shop'
     }, {
-        name: "Company D",
-        description: 'Another software consultancy shop'
+                name: "Company D",
+                description: 'Another software consultancy shop'
     }];
 
-    $scope.add = function() {
-        $scope.companies.push({
-            name: "Another company",
-            description: 'Another software consultancy shop'
-        });
-        $scope.companies.push({
-            name: "Another company",
-            description: 'Another software consultancy shop'
-        });
-        $scope.companies.push({
-            name: "Another company",
-            description: 'Another software consultancy shop'
-        });
-    };
+            $scope.add = function () {
+                $scope.companies.push({
+                    name: "Another company",
+                    description: 'Another software consultancy shop'
+                });
+                $scope.companies.push({
+                    name: "Another company",
+                    description: 'Another software consultancy shop'
+                });
+                $scope.companies.push({
+                    name: "Another company",
+                    description: 'Another software consultancy shop'
+                });
+            };
 
-    $scope.remove = function() {
-        $scope.companies = []
-    };
-}
+            $scope.remove = function () {
+                $scope.companies = []
+            };
+        }
 
 
-//]]>  
+        //]]>
+    </script>
 
-</script>
-
-  <link href="../bower_components/animate.css/animate.min.css" rel="stylesheet"/>
+    
 </body>
 
 
 </html>
-

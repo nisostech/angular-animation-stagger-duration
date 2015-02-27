@@ -193,15 +193,15 @@ function animation() {
             //ng-enter class
         vein.inject(ngEnterClass.toString(), {
             'transition': duration + "s",
-            "-webkit-animation-name": "slideInRight",
-            "animation-name": "slideInRight"
+            "-webkit-animation-name": "fadeInRight",
+            "animation-name": "fadeInRight"
         });
         //leave class
         vein.inject(ngLeaveClass.toString(), {
             "animation-duration": "1s",
             "-webkit-animation-duration": "1s",
-            "-webkit-animation-name": "slideInLeft",
-            "animation-name": "slideInLeft"
+            "-webkit-animation-name": "fadeInLeft",
+            "animation-name": "fadeInLeft"
         });
         //enter stager
         vein.inject(ngEnterStaggerClass.toString(), {
