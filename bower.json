@@ -1,0 +1,28 @@
+{
+    "name": "angular-animation-stagger-duration",
+    "version": "0.0.0",
+    "homepage": "https://github.com/tushariscoolster/angular-animation-stagger-duration",
+    "authors": [
+    "Tushar Borole <tushariscoolster@gmail.com>"
+  ],
+    "description": "angualr animation with customization of stagger and duration",
+    "main": "angular.animation.js",
+    "keywords": [
+    "angular",
+    "animation",
+    "stagger",
+    "duration",
+    "angularanimation"
+  ],
+    "license": "MIT",
+    "dependencies": {
+        "animate.css": "3.2.0"
+    },
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
