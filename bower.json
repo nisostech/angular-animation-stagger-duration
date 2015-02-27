@@ -5,7 +5,7 @@
     "authors": [
     "Tushar Borole <tushariscoolster@gmail.com>"
   ],
-    "description": "angualr animation with customization of stagger and duration",
+    "description": "angular animation with customization of stagger and duration",
     "main": "angular.animation.js",
     "keywords": [
     "angular",
